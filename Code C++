@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+    int player;
+    srand(time(0));
+    int comp = rand() % 2;
+
+    cout << "Welcome to the game ROCK-PAPER-SCISSORS" << endl;
+    cout << "----------------------------------------" << endl;
+    cout << "Make your choice 0(ROCK), 1(PAPER), 2(SCISSORS) : ";
+    cin >> player;
+
+    if(player > 2 || player < 0){
+        cout << "Please enter a valid choice!" << endl;
+    }else if(player == 0){
+        cout << "You choose rock" << endl;
+    }else if(player = 1){
+        cout << "You choose paper" << endl;
+    }else if(player == 2){
+        cout << "You choose scissors" << endl;
+    }
+
+    if(comp > 2 || comp < 0){
+        cout << " " << endl;
+    }else if(comp == 0){
+        cout << "COM choose rock" << endl;
+    }else if (comp == 1){
+        cout << "COM choose paper" << endl;
+    }else if(comp ==2){
+        cout << "COM choose scissors" << endl;
+    }
+
+    if(comp == player){
+        cout << "You are a serries" << endl;
+    }
+
+    if(comp == 0 && player == 1){
+        cout << "You winner!" << endl;
+    }else if(comp == 0 && player == 2){
+        cout << "You loose";
+    }
+
+    if(comp == 1 && player == 2){
+        cout << "You winner!" << endl;
+    }else if(comp == 1 && player == 0){
+        cout << "You loose";
+    }
+
+    if(comp == 2 && player == 0){
+        cout << "You winner!" << endl;
+    }else if(comp == 2 && player == 1){
+        cout << "You loose";
+    }
+    return 0;
+}
